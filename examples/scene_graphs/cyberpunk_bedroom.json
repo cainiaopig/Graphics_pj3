@@ -1,0 +1,137 @@
+{
+  "scene_id": "cyberpunk_bedroom_001",
+  "scene_type": "bedroom",
+  "style": ["cozy", "cyberpunk", "neon"],
+  "room": {
+    "width": 6.0,
+    "depth": 5.0,
+    "height": 3.0,
+    "floor_material": "dark wood",
+    "wall_material": "dark concrete"
+  },
+  "objects": [
+    {
+      "id": "bed_1",
+      "type": "bed",
+      "description": "a dark fabric bed with pillows",
+      "semantic_position": "left side of the room",
+      "size": [2.2, 1.4, 0.55],
+      "material": "dark fabric",
+      "color": "dark gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "desk_1",
+      "type": "desk",
+      "description": "a dark wooden computer desk",
+      "semantic_position": "right side of the room",
+      "size": [1.6, 0.7, 0.75],
+      "material": "dark wood",
+      "color": "black",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "monitor_1",
+      "type": "monitor",
+      "description": "a glowing computer monitor",
+      "semantic_position": "on desk_1",
+      "size": [0.8, 0.08, 0.45],
+      "material": "black plastic and emissive screen",
+      "color": "cyan",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "neon_1",
+      "type": "neon_light",
+      "description": "magenta and blue neon wall light",
+      "semantic_position": "back wall",
+      "size": [1.4, 0.05, 0.12],
+      "material": "emissive",
+      "color": "magenta",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "poster_1",
+      "type": "poster",
+      "description": "a futuristic wall poster",
+      "semantic_position": "left wall",
+      "size": [0.8, 0.03, 1.0],
+      "material": "paper",
+      "color": "blue",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "window_1",
+      "type": "window",
+      "description": "a window showing futuristic city lights outside",
+      "semantic_position": "back wall",
+      "size": [1.6, 0.05, 1.1],
+      "material": "glass",
+      "color": "cyan",
+      "rotation": [0, 0, 0],
+      "extra": {
+        "outside_view": "futuristic city lights"
+      }
+    },
+    {
+      "id": "carpet_1",
+      "type": "carpet",
+      "description": "a soft carpet on the floor",
+      "semantic_position": "center of the room",
+      "size": [2.0, 1.5, 0.03],
+      "material": "fabric",
+      "color": "dark purple",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    }
+  ],
+  "relations": [
+    {
+      "subject": "monitor_1",
+      "predicate": "on",
+      "object": "desk_1"
+    },
+    {
+      "subject": "neon_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "poster_1",
+      "predicate": "attached_to",
+      "object": "left_wall"
+    },
+    {
+      "subject": "window_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "carpet_1",
+      "predicate": "near",
+      "object": "bed_1"
+    }
+  ],
+  "lighting": {
+    "mood": "cyberpunk",
+    "main_colors": ["blue", "magenta"],
+    "brightness": "medium",
+    "use_emissive_lights": true
+  },
+  "camera": {
+    "view": "wide angle",
+    "position": [4.5, -5.0, 3.0],
+    "target": [0.0, 0.0, 1.2],
+    "focal_length": 28.0,
+    "resolution": [1280, 720]
+  },
+  "metadata": {
+    "source_prompt": "Create a cozy cyberpunk bedroom with a bed, desk, computer monitor, neon lights, posters, carpet, and a window showing a futuristic city.",
+    "version": "mvp"
+  }
+}

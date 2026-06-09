@@ -1,0 +1,83 @@
+# BlenderSceneAgent Default Configuration
+
+backend: mock
+
+# LLM settings (for future use with real API backends)
+llm:
+  api_base: ""
+  api_key: ""
+  model: ""
+
+# Output directories
+outputs:
+  scene_json: "outputs/scene_json"
+  validation: "outputs/validation"
+  blender_scripts: "outputs/blender_scripts"
+  renders: "outputs/renders"
+  videos: "outputs/videos"
+  logs: "outputs/logs"
+
+# Default render settings
+render:
+  engine: "CYCLES"
+  resolution_x: 1280
+  resolution_y: 720
+  samples: 128
+
+# Supported object types
+supported_object_types:
+  - bed
+  - desk
+  - chair
+  - table
+  - sofa
+  - shelf
+  - counter
+  - bookshelf
+  - monitor
+  - keyboard
+  - lamp
+  - plant
+  - carpet
+  - poster
+  - blackboard
+  - projector_screen
+  - menu_board
+  - glowing_tube
+  - warning_sign
+  - neon_light
+  - book
+  - cup
+  - window
+  - door
+  - wall_decoration
+
+# Supported scene types
+supported_scene_types:
+  - bedroom
+  - study_room
+  - classroom
+  - coffee_shop
+  - laboratory
+  - generic_room
+
+# Supported relation predicates
+supported_relations:
+  - "on"
+  - "near"
+  - "left_of"
+  - "right_of"
+  - "in_front_of"
+  - "behind"
+  - "attached_to"
+  - "inside"
+  - "facing"
+
+# Room surfaces valid for relations
+room_surfaces:
+  - back_wall
+  - front_wall
+  - left_wall
+  - right_wall
+  - ceiling
+  - floor

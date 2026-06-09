@@ -1,0 +1,201 @@
+{
+  "scene_id": "small_coffee_shop_001",
+  "scene_type": "coffee_shop",
+  "style": ["cozy", "warm", "rustic"],
+  "room": {
+    "width": 6.0,
+    "depth": 5.0,
+    "height": 3.0,
+    "floor_material": "dark wood planks",
+    "wall_material": "exposed brick"
+  },
+  "objects": [
+    {
+      "id": "table_1",
+      "type": "table",
+      "description": "round wooden table near the window",
+      "semantic_position": "left side of the room",
+      "size": [0.9, 0.9, 0.75],
+      "material": "oak wood",
+      "color": "warm brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "table_2",
+      "type": "table",
+      "description": "round wooden table near the counter",
+      "semantic_position": "right side of the room",
+      "size": [0.9, 0.9, 0.75],
+      "material": "oak wood",
+      "color": "warm brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "chair_1",
+      "type": "chair",
+      "description": "wooden chair at table 1",
+      "semantic_position": "near table_1",
+      "size": [0.45, 0.45, 0.85],
+      "material": "wood",
+      "color": "brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "chair_2",
+      "type": "chair",
+      "description": "wooden chair at table 2",
+      "semantic_position": "near table_2",
+      "size": [0.45, 0.45, 0.85],
+      "material": "wood",
+      "color": "brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "counter_1",
+      "type": "counter",
+      "description": "long wooden service counter",
+      "semantic_position": "back wall",
+      "size": [3.0, 0.7, 1.1],
+      "material": "dark wood",
+      "color": "dark brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "menu_board_1",
+      "type": "menu_board",
+      "description": "chalkboard menu hanging above the counter",
+      "semantic_position": "back wall",
+      "size": [1.5, 0.04, 0.9],
+      "material": "chalkboard",
+      "color": "black",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "plant_1",
+      "type": "plant",
+      "description": "potted plant near the window",
+      "semantic_position": "near window_1",
+      "size": [0.3, 0.3, 0.6],
+      "material": "ceramic pot and leaves",
+      "color": "green",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "lamp_1",
+      "type": "lamp",
+      "description": "hanging pendant lamp above table 1",
+      "semantic_position": "ceiling",
+      "size": [0.3, 0.3, 0.25],
+      "material": "metal and glass",
+      "color": "copper",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "lamp_2",
+      "type": "lamp",
+      "description": "hanging pendant lamp above table 2",
+      "semantic_position": "ceiling",
+      "size": [0.3, 0.3, 0.25],
+      "material": "metal and glass",
+      "color": "copper",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "cup_1",
+      "type": "cup",
+      "description": "coffee cup on table 1",
+      "semantic_position": "on table_1",
+      "size": [0.08, 0.08, 0.1],
+      "material": "ceramic",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "window_1",
+      "type": "window",
+      "description": "large street-facing window",
+      "semantic_position": "front wall",
+      "size": [2.5, 0.05, 1.8],
+      "material": "glass and wood frame",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {
+        "outside_view": "quiet street"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "chair_1",
+      "predicate": "near",
+      "object": "table_1"
+    },
+    {
+      "subject": "chair_2",
+      "predicate": "near",
+      "object": "table_2"
+    },
+    {
+      "subject": "menu_board_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "counter_1",
+      "predicate": "near",
+      "object": "back_wall"
+    },
+    {
+      "subject": "plant_1",
+      "predicate": "near",
+      "object": "window_1"
+    },
+    {
+      "subject": "lamp_1",
+      "predicate": "attached_to",
+      "object": "ceiling"
+    },
+    {
+      "subject": "lamp_2",
+      "predicate": "attached_to",
+      "object": "ceiling"
+    },
+    {
+      "subject": "cup_1",
+      "predicate": "on",
+      "object": "table_1"
+    },
+    {
+      "subject": "window_1",
+      "predicate": "attached_to",
+      "object": "front_wall"
+    }
+  ],
+  "lighting": {
+    "mood": "warm and intimate",
+    "main_colors": ["warm yellow", "soft amber"],
+    "brightness": "medium",
+    "use_emissive_lights": false
+  },
+  "camera": {
+    "view": "perspective",
+    "position": [3.5, -4.5, 2.5],
+    "target": [0.0, 0.0, 1.2],
+    "focal_length": 28.0,
+    "resolution": [1280, 720]
+  },
+  "metadata": {
+    "source_prompt": "Create a small cozy coffee shop with round tables, chairs, counter, menu board, plants, pendant lamps, cups, and large windows.",
+    "version": "mvp"
+  }
+}

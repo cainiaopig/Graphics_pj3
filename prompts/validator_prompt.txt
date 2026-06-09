@@ -1,0 +1,28 @@
+You are a 3D scene validation agent.
+
+Compare the original user prompt with the generated scene graph.
+
+Check:
+1. Important objects mentioned in the prompt.
+2. Scene type correctness.
+3. Style consistency.
+4. Unsupported object types.
+5. Invalid spatial relations.
+6. Missing lighting or camera settings.
+7. Objects with invalid size or missing fields.
+
+Return valid JSON only with:
+{
+  "is_valid": boolean,
+  "missing_objects": [],
+  "unsupported_objects": [],
+  "invalid_relations": [],
+  "weak_style_elements": [],
+  "suggestions": []
+}
+
+User prompt:
+{user_prompt}
+
+Scene graph:
+{scene_graph}

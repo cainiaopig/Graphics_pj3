@@ -1,0 +1,153 @@
+{
+  "scene_id": "modern_classroom_001",
+  "scene_type": "classroom",
+  "style": ["modern", "clean", "bright"],
+  "room": {
+    "width": 8.0,
+    "depth": 7.0,
+    "height": 3.2,
+    "floor_material": "light tile",
+    "wall_material": "white paint"
+  },
+  "objects": [
+    {
+      "id": "desk_1",
+      "type": "desk",
+      "description": "student desk row 1 left",
+      "semantic_position": "left side of the room",
+      "size": [1.2, 0.6, 0.7],
+      "material": "laminate",
+      "color": "light gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "desk_2",
+      "type": "desk",
+      "description": "student desk row 1 right",
+      "semantic_position": "right side of the room",
+      "size": [1.2, 0.6, 0.7],
+      "material": "laminate",
+      "color": "light gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "chair_1",
+      "type": "chair",
+      "description": "chair for desk 1",
+      "semantic_position": "in front of desk_1",
+      "size": [0.45, 0.45, 0.8],
+      "material": "plastic and metal",
+      "color": "blue",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "chair_2",
+      "type": "chair",
+      "description": "chair for desk 2",
+      "semantic_position": "in front of desk_2",
+      "size": [0.45, 0.45, 0.8],
+      "material": "plastic and metal",
+      "color": "blue",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "blackboard_1",
+      "type": "blackboard",
+      "description": "large wall-mounted blackboard",
+      "semantic_position": "front wall",
+      "size": [3.0, 0.05, 1.2],
+      "material": "blackboard surface",
+      "color": "dark green",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "projector_screen_1",
+      "type": "projector_screen",
+      "description": "retractable projector screen above blackboard",
+      "semantic_position": "front wall",
+      "size": [2.0, 0.03, 1.5],
+      "material": "white matte screen",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "window_1",
+      "type": "window",
+      "description": "large window on the left wall",
+      "semantic_position": "left wall",
+      "size": [2.0, 0.05, 1.5],
+      "material": "glass and aluminum frame",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {
+        "outside_view": "campus"
+      }
+    },
+    {
+      "id": "lamp_1",
+      "type": "lamp",
+      "description": "ceiling light panel",
+      "semantic_position": "ceiling",
+      "size": [1.2, 0.3, 0.08],
+      "material": "metal and diffuser",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    }
+  ],
+  "relations": [
+    {
+      "subject": "chair_1",
+      "predicate": "in_front_of",
+      "object": "desk_1"
+    },
+    {
+      "subject": "chair_2",
+      "predicate": "in_front_of",
+      "object": "desk_2"
+    },
+    {
+      "subject": "blackboard_1",
+      "predicate": "attached_to",
+      "object": "front_wall"
+    },
+    {
+      "subject": "projector_screen_1",
+      "predicate": "attached_to",
+      "object": "front_wall"
+    },
+    {
+      "subject": "window_1",
+      "predicate": "attached_to",
+      "object": "left_wall"
+    },
+    {
+      "subject": "lamp_1",
+      "predicate": "attached_to",
+      "object": "ceiling"
+    }
+  ],
+  "lighting": {
+    "mood": "bright and clean",
+    "main_colors": ["cool white"],
+    "brightness": "high",
+    "use_emissive_lights": false
+  },
+  "camera": {
+    "view": "perspective",
+    "position": [0.0, -8.0, 3.5],
+    "target": [0.0, 0.0, 1.5],
+    "focal_length": 24.0,
+    "resolution": [1280, 720]
+  },
+  "metadata": {
+    "source_prompt": "Create a modern classroom with desks, chairs, blackboard, projector screen, windows, and ceiling lights.",
+    "version": "mvp"
+  }
+}

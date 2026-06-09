@@ -1,0 +1,21 @@
+You are a scene graph repair agent.
+
+Given the original user prompt, the current scene graph, and the validation feedback, repair the scene graph.
+
+Rules:
+1. Keep valid existing objects.
+2. Add missing important objects.
+3. Remove or replace unsupported objects.
+4. Fix invalid relations.
+5. Strengthen weak style elements using supported objects, materials, colors, or lights.
+6. Return the full repaired scene graph as valid JSON only.
+7. Do not include markdown.
+
+User prompt:
+{user_prompt}
+
+Current scene graph:
+{scene_graph}
+
+Validation feedback:
+{validation_report}

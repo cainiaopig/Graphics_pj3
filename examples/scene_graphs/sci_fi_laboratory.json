@@ -1,0 +1,183 @@
+{
+  "scene_id": "sci_fi_laboratory_001",
+  "scene_type": "laboratory",
+  "style": ["sci-fi", "futuristic", "industrial", "blue neon"],
+  "room": {
+    "width": 7.0,
+    "depth": 6.0,
+    "height": 3.5,
+    "floor_material": "metal grating",
+    "wall_material": "dark metal panels"
+  },
+  "objects": [
+    {
+      "id": "desk_1",
+      "type": "desk",
+      "description": "metal workbench on the left",
+      "semantic_position": "left side of the room",
+      "size": [2.0, 0.8, 0.9],
+      "material": "dark metal",
+      "color": "dark gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "desk_2",
+      "type": "desk",
+      "description": "metal workbench on the right",
+      "semantic_position": "right side of the room",
+      "size": [2.0, 0.8, 0.9],
+      "material": "dark metal",
+      "color": "dark gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "monitor_1",
+      "type": "monitor",
+      "description": "large holographic display on left workbench",
+      "semantic_position": "on desk_1",
+      "size": [1.0, 0.08, 0.55],
+      "material": "metal and emissive screen",
+      "color": "cyan",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "monitor_2",
+      "type": "monitor",
+      "description": "secondary display on right workbench",
+      "semantic_position": "on desk_2",
+      "size": [0.8, 0.08, 0.45],
+      "material": "metal and emissive screen",
+      "color": "blue",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "shelf_1",
+      "type": "shelf",
+      "description": "metal storage shelf on back wall",
+      "semantic_position": "back wall",
+      "size": [2.0, 0.4, 1.0],
+      "material": "metal",
+      "color": "silver",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "glowing_tube_1",
+      "type": "glowing_tube",
+      "description": "large vertical glowing specimen tube",
+      "semantic_position": "right wall",
+      "size": [0.3, 0.3, 2.0],
+      "material": "glass and emissive liquid",
+      "color": "cyan",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "glowing_tube_2",
+      "type": "glowing_tube",
+      "description": "second glowing specimen tube",
+      "semantic_position": "right wall",
+      "size": [0.3, 0.3, 2.0],
+      "material": "glass and emissive liquid",
+      "color": "green",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "warning_sign_1",
+      "type": "warning_sign",
+      "description": "yellow hazard warning sign on wall",
+      "semantic_position": "back wall",
+      "size": [0.5, 0.02, 0.35],
+      "material": "plastic",
+      "color": "yellow",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "neon_1",
+      "type": "neon_light",
+      "description": "blue neon strip along ceiling edge",
+      "semantic_position": "ceiling",
+      "size": [3.0, 0.04, 0.08],
+      "material": "emissive",
+      "color": "blue",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "door_1",
+      "type": "door",
+      "description": "heavy metal sliding door",
+      "semantic_position": "front wall",
+      "size": [1.0, 0.1, 2.2],
+      "material": "metal",
+      "color": "dark gray",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    }
+  ],
+  "relations": [
+    {
+      "subject": "monitor_1",
+      "predicate": "on",
+      "object": "desk_1"
+    },
+    {
+      "subject": "monitor_2",
+      "predicate": "on",
+      "object": "desk_2"
+    },
+    {
+      "subject": "shelf_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "glowing_tube_1",
+      "predicate": "near",
+      "object": "right_wall"
+    },
+    {
+      "subject": "glowing_tube_2",
+      "predicate": "near",
+      "object": "right_wall"
+    },
+    {
+      "subject": "warning_sign_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "neon_1",
+      "predicate": "attached_to",
+      "object": "ceiling"
+    },
+    {
+      "subject": "door_1",
+      "predicate": "attached_to",
+      "object": "front_wall"
+    }
+  ],
+  "lighting": {
+    "mood": "sci-fi cold blue",
+    "main_colors": ["blue", "cyan", "cool white"],
+    "brightness": "medium",
+    "use_emissive_lights": true
+  },
+  "camera": {
+    "view": "wide angle",
+    "position": [5.0, -5.5, 3.0],
+    "target": [0.0, 0.0, 1.5],
+    "focal_length": 24.0,
+    "resolution": [1280, 720]
+  },
+  "metadata": {
+    "source_prompt": "Create a sci-fi laboratory with workbenches, monitors, glowing tubes, storage shelves, warning signs, and blue neon lights.",
+    "version": "mvp"
+  }
+}

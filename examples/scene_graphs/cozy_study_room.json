@@ -1,0 +1,158 @@
+{
+  "scene_id": "cozy_study_room_001",
+  "scene_type": "study_room",
+  "style": ["warm", "cozy", "traditional"],
+  "room": {
+    "width": 5.0,
+    "depth": 4.5,
+    "height": 2.8,
+    "floor_material": "dark wood",
+    "wall_material": "warm beige paint"
+  },
+  "objects": [
+    {
+      "id": "desk_1",
+      "type": "desk",
+      "description": "a large wooden writing desk",
+      "semantic_position": "center of the room",
+      "size": [1.8, 0.8, 0.75],
+      "material": "dark wood",
+      "color": "brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "chair_1",
+      "type": "chair",
+      "description": "a comfortable wooden chair",
+      "semantic_position": "in front of desk_1",
+      "size": [0.5, 0.5, 0.9],
+      "material": "wood and fabric",
+      "color": "dark brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "bookshelf_1",
+      "type": "bookshelf",
+      "description": "a tall wooden bookshelf filled with books",
+      "semantic_position": "left wall",
+      "size": [1.2, 0.35, 2.2],
+      "material": "dark wood",
+      "color": "brown",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "book_1",
+      "type": "book",
+      "description": "a stack of books on the desk",
+      "semantic_position": "on desk_1",
+      "size": [0.2, 0.14, 0.03],
+      "material": "paper",
+      "color": "red",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "lamp_1",
+      "type": "lamp",
+      "description": "a warm table lamp",
+      "semantic_position": "on desk_1",
+      "size": [0.2, 0.2, 0.4],
+      "material": "metal and glass",
+      "color": "brass",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "window_1",
+      "type": "window",
+      "description": "a window letting in warm afternoon light",
+      "semantic_position": "back wall",
+      "size": [1.4, 0.05, 1.0],
+      "material": "glass and wood frame",
+      "color": "white",
+      "rotation": [0, 0, 0],
+      "extra": {
+        "outside_view": "garden"
+      }
+    },
+    {
+      "id": "carpet_1",
+      "type": "carpet",
+      "description": "a warm oriental rug under the desk",
+      "semantic_position": "center of the room",
+      "size": [2.0, 1.5, 0.03],
+      "material": "woven fabric",
+      "color": "deep red",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    },
+    {
+      "id": "poster_1",
+      "type": "poster",
+      "description": "a framed wall painting",
+      "semantic_position": "right wall",
+      "size": [0.6, 0.03, 0.8],
+      "material": "canvas",
+      "color": "gold frame",
+      "rotation": [0, 0, 0],
+      "extra": {}
+    }
+  ],
+  "relations": [
+    {
+      "subject": "chair_1",
+      "predicate": "in_front_of",
+      "object": "desk_1"
+    },
+    {
+      "subject": "book_1",
+      "predicate": "on",
+      "object": "desk_1"
+    },
+    {
+      "subject": "lamp_1",
+      "predicate": "on",
+      "object": "desk_1"
+    },
+    {
+      "subject": "bookshelf_1",
+      "predicate": "attached_to",
+      "object": "left_wall"
+    },
+    {
+      "subject": "window_1",
+      "predicate": "attached_to",
+      "object": "back_wall"
+    },
+    {
+      "subject": "poster_1",
+      "predicate": "attached_to",
+      "object": "right_wall"
+    },
+    {
+      "subject": "carpet_1",
+      "predicate": "near",
+      "object": "desk_1"
+    }
+  ],
+  "lighting": {
+    "mood": "warm and cozy",
+    "main_colors": ["warm yellow", "soft white"],
+    "brightness": "medium",
+    "use_emissive_lights": false
+  },
+  "camera": {
+    "view": "perspective",
+    "position": [3.5, -4.0, 2.5],
+    "target": [0.0, 0.0, 1.0],
+    "focal_length": 28.0,
+    "resolution": [1280, 720]
+  },
+  "metadata": {
+    "source_prompt": "Create a warm study room with a wooden desk, chair, bookshelf, table lamp, window, carpet, books, and wall paintings.",
+    "version": "mvp"
+  }
+}
