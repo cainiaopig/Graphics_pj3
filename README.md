@@ -1,6 +1,6 @@
 # BlenderSceneAgent
 
-一个轻量级的智能体驱动 3D 场景生成系统，用于计算机图形学课程项目。
+一个轻量级的智能体驱动 3D 场景生成系统。
 
 **流水线：** 用户提示词 → Planner Agent → 场景图 JSON → Validator Agent → (Repair Agent) → Blender 场景构建 → 渲染图像
 
@@ -375,4 +375,4 @@ z 轴：高度方向（正值 = 上）
 
 ---
 
-*这是一个课程项目原型。第一版使用程序化图元和 Mock Agent，后续版本将逐步接入真实 LLM API。*
+*第一版使用程序化图元和 Mock Agent，后续版本将逐步接入真实 LLM API。*
