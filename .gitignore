@@ -20,3 +20,9 @@ outputs/
 *.log
 DS_Store
 Thumbs.db
+# LaTeX build artifacts
+*.aux
+*.out
+*.toc
+*.synctex.gz
+
