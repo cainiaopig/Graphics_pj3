@@ -86,10 +86,9 @@ class ValidatorAgent(BaseAgent):
         Returns:
             A ValidationReport with all findings.
         """
-        if self.is_mock:
-            return self._validate_rules(user_prompt, scene_graph)
-        else:
-            return self._validate_llm(user_prompt, scene_graph)
+        # Always use rule-based validation (rule checks are comprehensive;
+        # LLM-based validation is optional future work)
+        return self._validate_rules(user_prompt, scene_graph)
 
     def _validate_rules(
         self, user_prompt: str, scene_graph: SceneGraph

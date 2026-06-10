@@ -17,6 +17,13 @@ _PROJECT_ROOT = Path(__file__).resolve().parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
+# Load .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(_PROJECT_ROOT / ".env")
+except ImportError:
+    pass
+
 from core.logging_utils import setup_logger
 from core.pipeline import SceneGenerationPipeline
 
@@ -82,6 +89,12 @@ Examples:
         default=False,
         help="Print layout debug info and save layout report.",
     )
+    parser.add_argument(
+        "--blender",
+        type=str,
+        default=None,
+        help="Path to Blender executable (default: auto-detect via PATH).",
+    )
 
     return parser.parse_args()
 
@@ -112,6 +125,7 @@ def main() -> None:
         backend=args.backend,
         output_dir=args.output_dir,
         debug_layout=args.debug_layout,
+        blender_path=args.blender,
     )
 
     results = pipeline.run(
@@ -134,6 +148,11 @@ def main() -> None:
         print(f"  Post-repair valid:  {results.get('post_repair_valid', 'N/A')}")
     if "render_output" in results:
         print(f"  Render:             {results['render_output']}")
+    if "blend_file" in results:
+        print(f"  Blend file:         {results['blend_file']}")
+    if "visual_critique" in results:
+        print(f"  Critique:           {results['visual_critique']}")
+        print(f"  Critique score:     {results.get('visual_critique_score', 'N/A')}")
     print("=" * 60)
 
     # Exit with appropriate code

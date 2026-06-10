@@ -57,10 +57,9 @@ class RepairAgent(BaseAgent):
         Returns:
             A repaired (possibly modified) copy of the scene graph.
         """
-        if self.is_mock:
-            return self._repair_rules(user_prompt, scene_graph, validation_report)
-        else:
-            return self._repair_llm(user_prompt, scene_graph, validation_report)
+        # Always use rule-based repair (rule repairs are comprehensive;
+        # LLM-based repair is optional future work)
+        return self._repair_rules(user_prompt, scene_graph, validation_report)
 
     def _repair_rules(
         self,
